@@ -1,0 +1,5 @@
+Carlos,12000.23
+Alvaro,11500.0
+Larissa,10000.0
+Paula,5000.0
+Eunice,15000.0
