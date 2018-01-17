@@ -5,20 +5,25 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import br.com.xti.refinado.Recursvidade;
+import junit.framework.TestCase;
 
-class RecursividadeTest {
+public class RecursividadeTest  extends TestCase{
 
+	public RecursividadeTest() {
+		super("RecursividadeTest");
+	}
+	@Override
 	@BeforeEach
-	void setUp() throws Exception {
+	public void setUp() throws Exception {
 	}
 
 	@Test
-	void testSoma() {
+	public void testSoma() {
 		Assertions.assertEquals(55, Recursvidade.soma(10));
 	}
 
 	@Test
-	void testPotencia() {
+	public void testPotencia() {
 		Assertions.assertEquals(81, Recursvidade.potencia(3,4));
 	}
 

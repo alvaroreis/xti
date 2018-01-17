@@ -5,23 +5,29 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import br.com.xti.poo.Matematica;
+import junit.framework.TestCase;
 
-class MatematicaTest {
+public class MatematicaTest extends TestCase {
 	Matematica m;
 
+	public MatematicaTest() {
+		super("MatematicaTest");
+	}
+
+	@Override
 	@BeforeEach
-	void setUp() throws Exception {
+	public void setUp() throws Exception {
 		this.m = new Matematica();
 	}
 
 	@Test
-	void testMaior() {
+	public void testMaior() {
 		Assertions.assertEquals(2, this.m.maior(1, 2));
 	}
 
 	@Test
-	void testRaiz2() {
-		Assertions.assertEquals(4 , this.m.raiz2(16));
+	public void testRaiz2() {
+		Assertions.assertEquals(4, this.m.raiz2(16));
 
 	}
 

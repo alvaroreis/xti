@@ -5,23 +5,28 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import br.com.xti.heranca.Cubo;
+import junit.framework.TestCase;
 
-class CuboTest {
+public class CuboTest extends TestCase {
 	Cubo cubo;
 
+	public CuboTest() {
+		super("CuboTest");
+	}
+	@Override
 	@BeforeEach
-	void setUp() throws Exception {
+	public void setUp() throws Exception {
 		this.cubo = new Cubo(10);
 	}
 
 	@Test
-	void testCalcularArea() {
-		Assertions.assertEquals(1000, this.cubo.calcularArea(), 0);
+	public void testCalcularArea() {
+		Assertions.assertEquals(1000, this.cubo.calcularArea());
 	}
 
 	@Test
-	void testCalcularVolume() {
-		Assertions.assertEquals(600 , this.cubo.calcularVolume(), 0);
+	public void testCalcularVolume() {
+		Assertions.assertEquals(600 , this.cubo.calcularVolume());
 	}
 
 }
